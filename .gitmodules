@@ -10,3 +10,6 @@
 [submodule "vagrant/puppet/modules/mysql"]
 	path = vagrant/puppet/modules/mysql
 	url = https://github.com/example42/puppet-mysql.git
+[submodule "vagrant/puppet/modules/typo3"]
+	path = vagrant/puppet/modules/typo3
+	url = https://github.com/paschdan/puppet-typo3.git
