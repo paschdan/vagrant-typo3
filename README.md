@@ -34,20 +34,20 @@ A Vagrant Box installing Typo3 6.2 on Top of CentOs with PHP 5.5
 Due to a bug in the core, some pictures are not copied during installation of the introduction package. (see [Typo3 Bug#57312](http://forge.typo3.org/issues/57312) )
 This will be fixed in 6.2.1 but until then you have to copy the missing pictures manually:
 
-   `cp -R www/typo3.loc/typo3conf/ext/introduction/Initialisation/Files/images/theme www/typo3.loc/fileadmin/introduction/images/theme 
+   `cp -R www/typo3.loc/typo3conf/ext/introduction/Initialisation/Files/images/theme www/typo3.loc/fileadmin/introduction/images/theme
 
 ## Using TYPO3 < 6.2.0
 
 if you want to use older Typo3 versions, you have to edit the file `vagrant/puppet/manifests/init.pp`.
-Scroll to the button where it is installing typo3 and change it to the following:
-   ```
+Scroll to the button where it is installing typo3 and change it to the following:   
+   `
    #install typo3 6.1.7
     class { 'typo3' : 
         site_name => 'typo3.loc',
         version => '6.1.7',
         site_type => 'introductionpackage'
     }
-    ```
+    `
 ## Contributing
 
 1. Fork the repository on Github
