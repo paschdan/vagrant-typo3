@@ -40,14 +40,15 @@ This will be fixed in 6.2.1 but until then you have to copy the missing pictures
 
 if you want to use older Typo3 versions, you have to edit the file `vagrant/puppet/manifests/init.pp`.
 Scroll to the button where it is installing typo3 and change it to the following:   
-   ```
+```
    #install typo3 6.1.7
     class { 'typo3' : 
         site_name => 'typo3.loc',
         version => '6.1.7',
         site_type => 'introductionpackage'
     }
-    ```
+```
+
 ## Contributing
 
 1. Fork the repository on Github
