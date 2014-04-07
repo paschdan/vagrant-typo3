@@ -99,6 +99,14 @@ class { 'mysql':
 }
 
 #install typo3
+$site_name = 'typo3.loc'
+
 class { 'typo3' : 
-    site_name => 'typo3.loc'
+    site_name => $site_name 
+}
+
+apache::vhost { "${site_name}" :
+    docroot => "/var/www/${site_name}",
+    directory => "/var/www/${site_name}",
+    directory_allow_override   => 'All'
 }
